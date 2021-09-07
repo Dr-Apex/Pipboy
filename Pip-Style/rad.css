@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Pipboy;
+  src: url('monofonto.ttf');
+}
+body {
+  font-family: Pipboy;
+  color: #14fe17;
+  background: #0a1100;
+}
+body::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) 1px, transparent 1px, transparent 2px);
+  opacity: 0.3;
+  z-index: 1000000;
+  pointer-events: none;
+}
+.navbar {
+  border-bottom: 2px solid;
+  margin: 0px 10px;
+}
+.navbar::before, .navbar::after {
+  height: 7px;
+  width: 2px;
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 5000;
+  background: #14fe17;
+  bottom: -8px;
+}
+.navbar::before {
+  left: 0px;
+}
+.navbar::after {
+  right: 0px;
+}
+ul > li.navbar-item > a.nav-link, ul > li.nav-item > a.nav-link {
+  color: #14fe17 !important;
+  font-size: 32px;
+  line-height: 22px;
+  padding-bottom: 0px;
+}
+.navbar-item.active::before {
+  content: "";
+  position: absolute;
+  background: #f00;
+  width: 100%;
+  height: 20px;
+  top: 20px;
+  background: #0a1100;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-top: 2px solid;
+  left: 0px;
+}
+.navbar-light .navbar-item > .nav-link {
+  text-align: center;
+  margin: auto;
+  line-height: 22px;
+  padding-bottom: 0px;
+  z-index: 50;
+  position: relative;
+  background: #0a1100;
+}
+.navbar-light .navbar-item > .nav-link.f {
+  font-size: 32px;
+}
+.navbar-nav {
+  width: 100%;
+}
+.navbar-light ul.navbar-nav > li {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.nav.nav-tabs {
+  margin-bottom: 0px !important;
+}
+.row {
+  margin: 0px;
+}
+nav.pip-footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 20px);
+  height: 33px;
+  margin: 10px;
+  background: rgba(16, 255, 0, 0.15);
+}
+.navbar.navbar-light .navbar-nav {
+  margin: 0px 200px;
+}
+.navbar.navbar-light  .navbar-nav > li {
+  padding: 0px 20px;
+}
+.item-list {
+  float: left;
+  padding: 0px;
+  padding-top: 50px;
+  list-style: none;
+  margin: 0px;
+}
+.item-list li a {
+  display: inline-block;
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #14fe17;
+  padding-left: 23px;
+  font-size: 18px;
+  text-decoration: none !important;
+}
+.item-list li a:hover {
+  text-decoration: none;
+  background: #14fe17;
+  color: #0a1100;
+}
+.freq {
+  float: right;
+  padding-top: 50px;
+}
+.freq img {
+  filter: brightness(1.1);
+}
+.tab-pane.full {
+  height: calc(100vh - 160px);
+}
